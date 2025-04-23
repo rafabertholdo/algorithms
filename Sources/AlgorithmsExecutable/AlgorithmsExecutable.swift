@@ -5,23 +5,11 @@ import Foundation
 struct AlgorithmsExecutable {
 
     static func main() {
-        var array: [Int] = [1, 2, 3, 1]
-        // for _ in 1..<1_000_000 {
-        // array.append(Int.random(in: 0..<1_000_000))
-        // }
-        guard let logNpeakElement = array.findPeakElementLogN() else {
-            print("no peak element")
-            return
-        }
-
-        guard let peakElement = array.findPeakElement() else {
-            print("no peak element")
-            return
-        }
-        print(logNpeakElement)
-        print(peakElement)
-        if logNpeakElement != peakElement {
-            print("errou")
-        }
+        print(TwoSum.findIndexes([2, 7, 11, 15], target: 9))
+        print(TwoSum.findIndexes([3, 2, 4], target: 6))
+        print(TwoSum.findIndexes([3, 3], target: 6))
+        print(TwoSum.findIndexesLinear([2, 7, 11, 15], target: 9))
+        print(TwoSum.findIndexesLinear([3, 2, 4], target: 6))
+        print(TwoSum.findIndexesLinear([3, 3], target: 6))
     }
 }
